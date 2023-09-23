@@ -32,11 +32,25 @@ body{
     overflow-x: hidden;
 }
 .hero{
-    width: calc(var(--index) * 36);
+    width: 100%;
     position: absolute;
-    left: 36vw;
-    top: 5vh;
+    top: 0;
     z-index: -1;
+}
+.header_nav{
+    height: 50px;
+    background-color: rgb(255,255,255,0.2);
+}
+.nav_items {
+    height: 100%;
+    display: flex;
+    justify-content: space-around; 
+}
+.nav_item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
 }
 .conteiner{
     padding: 0vh 7vw;
