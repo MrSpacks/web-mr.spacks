@@ -3,6 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    text-decoration:none;
+    color: inherit;
+    font-size: 1.5rem;
+  }
+
+body::-webkit-scrollbar { width: 0; }
+
+body { -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; }
 .hero .content .main_header .main_gallery > *{
     will-change: transform;
 }
@@ -12,6 +22,17 @@
     --color_text: #cdc6c3;
     --gallery_gap: calc(var(--index) * 6)
 }
+@keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
 @font-face {
     font-family: s-outfit;
     src: url(../fonts/outfit-regular.woff2);
@@ -54,6 +75,31 @@ body{
 .conteiner{
     padding: 0vh 7vw;
 }
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 60px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  .down-arrow {
+    animation: jumpInfinite 1.5s infinite;
+  }
 .main_title{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-size: calc(var(--index) * 6);
@@ -65,7 +111,7 @@ body{
 }
 .main_sub-title{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: calc(var(--index) * 4);
+    font-size: calc(var(--index) * 3);
     position: absolute;
     /* width: min-content; */
     bottom: 11vh;
