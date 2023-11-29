@@ -181,7 +181,10 @@ body{
     }
     .main_sub-title {
         font-size: calc(var(--index) * 2);
-        bottom: 76vh;
+        top: 76vh;
         left: 5vh;
+    }
+    .down-arrow {
+        display: none;
     }
 }
