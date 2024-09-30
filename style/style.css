@@ -167,7 +167,9 @@ body{
     margin: 30px;
 }
 
-
+.footer_conteiner{
+    margin: 20px;
+}
 /* Adaptiv */
 @media (min-width: 750px) {
 }
