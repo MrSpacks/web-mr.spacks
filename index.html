@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <script defer src="libs/gsap/gsap.min.js"></script>
@@ -10,103 +10,166 @@
     <script defer src="libs/gsap/ScrollTrigger.min.js"></script>
     <script defer src="js/app.js"></script>
 
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/calculator.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="content">
-            <header class="hero_section">
-                <img data-speed=".6" class="hero" src="img/IMG_8552.png" alt="">
-                <div class="conteiner">
-                    <div data-speed=".75" class="main_header">
-                        <h1 class="main_title">Web Developer</h1>
-                        <h3 class="main_sub-title">Sergei Petukhov</h3>
-                    </div>
-                    <div class="down-arrow"></div>
+      <div class="content">
+        <header class="hero_section">
+          <img data-speed=".6" class="hero" src="img/IMG_8552.png" alt="" />
+          <div class="conteiner">
+            <button class="btn_popover" popovertarget="my-popover">
+              Contact me
+            </button>
+            <div class="popover" popover id="my-popover">
+              <div class="popover_conteiner">
+                <form id="contactForm">
+                  <label for="name">Your name</label>
+                  <input
+                    placeholder="Enter your name"
+                    type="text"
+                    name="name"
+                    required
+                  />
+                  <label for="email">Your e-mail</label>
+                  <input
+                    name="email"
+                    placeholder="Enter your e-mail"
+                    type="email"
+                    required
+                  />
+                  <label for="message"
+                    >Enter your wishes and other questions</label
+                  >
+                  <textarea
+                    name="message"
+                    placeholder="Enter your wishes and other questions"
+                    required
+                  ></textarea>
+                  <button class="btn_submit" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+            <div data-speed=".75" class="main_header">
+              <h1 class="main_title">Web Developer</h1>
+              <h3 class="main_sub-title">Sergei Petukhov</h3>
+            </div>
+            <div class="down-arrow"></div>
+          </div>
+        </header>
+        <div class="portfolio">
+          <div class="conteiner">
+            <main class="main_gallery">
+              <div data-speed=".9" class="gallery_left">
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">The adaptive multipage "Podcast"</h2>
+                  <p class="text_block_p">
+                    My most recent school project, an adaptive multi-page site
+                    written in HTML with SCSS
+                  </p>
                 </div>
-            </header>
-            <div class="portfolio">
-                <div class="conteiner">
-                    <main class="main_gallery">
-                        <div data-speed=".9" class="gallery_left">
-                            <div class="text_block gallery_item">
-                                <h2 class="text_block_h">The adaptive multipage "Podcast"</h2>
-                                <p class="text_block_p">My most recent school project, an adaptive multi-page site written in HTML with SCSS</p>
-                            </div>
-                            <a href="https://mrspacks.github.io/Podcast/">
-                                <img class="gallery_item" src="img/New Website Blue Mockup Instagram - Laptop.png" alt=""></a>
-                            <div class="text_block gallery_item">
-                                <h2 class="text_block_h">My new project, the adapter landing page</h2>
-                                <p class="text_block_p">In this project is implemented not only desktop version,
-                                     but also adaptive for tablet and mobile phone, adaptive is 
-                                     implemented through css media queries. 
-                                    Also realized burger menu of mobile version, with the help of Java Script</p>
-                            </div>
-                            <a href="https://mrspacks.github.io/Learn-the-art-of-Game-Dev/">
-                                <img class="gallery_item" src="img/Learn game dev.png" alt=""></a>
-                            <div class="text_block gallery_item">
-                                <h2 class="text_block_h">Watch landing</h2>
-                                <p class="text_block_p">My first made-up landing page with simple adaptive</p>
-                            </div>
-                            <img class="gallery_item" src="img/1.png" alt="#">
-                            <div class="text_block gallery_item">
-                                <h2 class="text_block_h">Plant landing</h2>
-                                <p class="text_block_p">A more serious website lending with a lot of elements</p>
-                            </div>
-                            <img class="gallery_item" src="img/2.png" alt="#">
-                        </div>
-                            <div data-speed=".8" class="gallery_right">
-                                <div class="text_block gallery_item">
-                                    <h2 class="text_block_h">Lending website with adaptive cell phone</h2>
-                                    <p class="text_block_p">My little do-it-yourself design layout from figma.
-                                         Adaptive design for cell phone organized with CSS @media requests</p>
-                                </div>
-                                <a href="https://mrspacks.github.io/Bike/"><img class="gallery_item" src="img/Bike_presentasion.png" alt="#"></a>
-                                <div class="text_block gallery_item">
-                                    <h2 class="text_block_h">Furniture</h2>
-                                    <p class="text_block_p">Example of multipage site layout (without adaptation for gadgets)</p>
-                                </div>
-                                <img class="gallery_item" src="img/4.png" alt="#">
-                                
-                                <div class="text_block gallery_item">
-                                    <h2 class="text_block_h">Wigs shop</h2>
-                                    <p class="text_block_p">Even more interesting work with the adaptive for most devices, 
-                                        on small screens, the left menu becomes drop down</p>
-                                </div>
-                                    
-                                <img class="gallery_item" src="img/3.png" alt="#">
-                                
-                            </div>
-                    </main>
-                    <footer>
-                        <div class="footer_conteiner">
-                            <nav class="navigation_items">
-                                <!-- <a href="tel+420773497784" class="nav_item">
+                <a href="https://mrspacks.github.io/Podcast/">
+                  <img
+                    class="gallery_item"
+                    src="img/New Website Blue Mockup Instagram - Laptop.png"
+                    alt=""
+                /></a>
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">
+                    My new project, the adapter landing page
+                  </h2>
+                  <p class="text_block_p">
+                    In this project is implemented not only desktop version, but
+                    also adaptive for tablet and mobile phone, adaptive is
+                    implemented through css media queries. Also realized burger
+                    menu of mobile version, with the help of Java Script
+                  </p>
+                </div>
+                <a href="https://mrspacks.github.io/Learn-the-art-of-Game-Dev/">
+                  <img class="gallery_item" src="img/Learn game dev.png" alt=""
+                /></a>
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">Watch landing</h2>
+                  <p class="text_block_p">
+                    My first made-up landing page with simple adaptive
+                  </p>
+                </div>
+                <img class="gallery_item" src="img/1.png" alt="#" />
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">Plant landing</h2>
+                  <p class="text_block_p">
+                    A more serious website lending with a lot of elements
+                  </p>
+                </div>
+                <img class="gallery_item" src="img/2.png" alt="#" />
+              </div>
+              <div data-speed=".8" class="gallery_right">
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">
+                    Lending website with adaptive cell phone
+                  </h2>
+                  <p class="text_block_p">
+                    My little do-it-yourself design layout from figma. Adaptive
+                    design for cell phone organized with CSS @media requests
+                  </p>
+                </div>
+                <a href="https://mrspacks.github.io/Bike/"
+                  ><img
+                    class="gallery_item"
+                    src="img/Bike_presentasion.png"
+                    alt="#"
+                /></a>
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">Furniture</h2>
+                  <p class="text_block_p">
+                    Example of multipage site layout (without adaptation for
+                    gadgets)
+                  </p>
+                </div>
+                <img class="gallery_item" src="img/4.png" alt="#" />
+
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">Wigs shop</h2>
+                  <p class="text_block_p">
+                    Even more interesting work with the adaptive for most
+                    devices, on small screens, the left menu becomes drop down
+                  </p>
+                </div>
+
+                <img class="gallery_item" src="img/3.png" alt="#" />
+              </div>
+            </main>
+            <footer>
+              <div class="footer_conteiner">
+                <nav class="navigation_items">
+                  <!-- <a href="tel+420773497784" class="nav_item">
                                     <img src="img/Icon/icons8-call-64.png" alt="phone">
                                     <p class="nav_title">Phone</p>
                                 </a> -->
-                                <a href="https://www.facebook.com/mr.spacks" class="nav_item">
-                                    <img src="img/Icon/icons8-facebook-50.png" alt="facebook">
-                                    <p class="nav_title">facebook</p>
-                                </a>
-                                <a href="https://github.com/MrSpacks" class="nav_item">
-                                    <img src="img/Icon/icons8-github-60.png" alt="GitHub">
-                                    <p class="nav_title">GitHub</p>
-                                </a>
-                                <a href="https://www.instagram.com/mr.spacks/" class="nav_item">
-                                    <img src="img/Icon/icons8-instagram-50.png" alt="instagram">
-                                    <p class="nav_title">instagram</p>
-                                </a>
-                            </nav>
-                        </div>
-                    </footer>
-                </div>
-            </div>
-            
+                  <a href="https://www.facebook.com/mr.spacks" class="nav_item">
+                    <img src="img/Icon/icons8-facebook-50.png" alt="facebook" />
+                    <p class="nav_title">facebook</p>
+                  </a>
+                  <a href="https://github.com/MrSpacks" class="nav_item">
+                    <img src="img/Icon/icons8-github-60.png" alt="GitHub" />
+                    <p class="nav_title">GitHub</p>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/mr.spacks/"
+                    class="nav_item"
+                  >
+                    <img
+                      src="img/Icon/icons8-instagram-50.png"
+                      alt="instagram"
+                    />
+                    <p class="nav_title">instagram</p>
+                  </a>
+                </nav>
+              </div>
+            </footer>
+          </div>
         </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
