@@ -15,6 +15,7 @@
   <body>
     <div class="wrapper">
       <div class="content">
+        <!-- header -->
         <header class="hero_section">
           <img data-speed=".6" class="hero" src="img/IMG_8552.png" alt="" />
           <div class="conteiner">
@@ -104,6 +105,59 @@
                 <img class="gallery_item" src="img/2.png" alt="#" />
               </div>
               <div data-speed=".8" class="gallery_right">
+                <!-- gallery item -->
+                <div class="text_block gallery_item">
+                  <h2 class="text_block_h">My first phone app</h2>
+                  <p class="text_block_p">
+                    React Native Expo was used for development
+                  </p>
+                </div>
+                <a href="./English_card/index.html"
+                  ><div class="slider">
+                    <img
+                      class="slides"
+                      src="./img/AppPreview/1.png"
+                      alt="Image"
+                    />
+                    <img
+                      class="slides"
+                      src="./img/AppPreview/2.png"
+                      alt="Image"
+                    />
+                    <img
+                      class="slides"
+                      src="./img/AppPreview/3.png"
+                      alt="Image"
+                    />
+                    <img
+                      class="slides"
+                      src="./img/AppPreview/4.png"
+                      alt="Image"
+                    />
+                    <img
+                      class="slides"
+                      src="./img/AppPreview/5.png"
+                      alt="Image"
+                    /></div
+                ></a>
+                <script>
+                  let slideIndex = 0;
+                  showSlides();
+
+                  function showSlides() {
+                    let slides = document.getElementsByClassName("slides");
+                    for (let i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                      slideIndex = 1;
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 3000); // Меняет слайд каждые 3 секунды
+                  }
+                </script>
+                <!--gallery item -->
                 <div class="text_block gallery_item">
                   <h2 class="text_block_h">
                     Lending website with adaptive cell phone
@@ -119,6 +173,7 @@
                     src="img/Bike_presentasion.png"
                     alt="#"
                 /></a>
+                <!-- gallery item -->
                 <div class="text_block gallery_item">
                   <h2 class="text_block_h">Furniture</h2>
                   <p class="text_block_p">
@@ -135,7 +190,7 @@
                     devices, on small screens, the left menu becomes drop down
                   </p>
                 </div>
-
+                <!-- gallery item -->
                 <img class="gallery_item" src="img/3.png" alt="#" />
               </div>
             </main>
